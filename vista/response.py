@@ -1,8 +1,10 @@
 from flask import jsonify
-def json_response(prediction,flor):
+
+def json_response(prediction,flor, using):
     result = {
-        'flor': flor,
-        'prediction': prediction
+        'flower': flor,
+        'prediction': prediction,
+        'using': using
     }
 
     return jsonify(result)
